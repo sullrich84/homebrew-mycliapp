@@ -25,6 +25,7 @@ setup(
     # Note: Also import this in __init__.py!
     install_requires=[
         "argparse==1.4.0",
+        "ansicolors==1.1.8",
     ],
     # Homebrew will use this to define the entry point
     # for the executable of this application.

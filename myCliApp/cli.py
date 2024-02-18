@@ -1,5 +1,6 @@
 import sys
 import argparse
+from ansicolors
 from myCliApp.globals import app_version, app_name
 
 
@@ -13,7 +14,7 @@ def parse_arguments():
     parser.add_argument(
         "-v",
         "--version",
-        help="Prints the application version",
+        help="prints the applications version",
         action="version",
         version=f"%(prog)s {app_version}",
     )
@@ -26,7 +27,7 @@ def cli():
         args = parse_arguments()
 
         # Add application code here
-        print(f"{app_name} v{app_version}")
+        print(cyan(app_name), yellow(f"v{app_version}"))
 
     except KeyboardInterrupt:
         print("Aborted by user.")
