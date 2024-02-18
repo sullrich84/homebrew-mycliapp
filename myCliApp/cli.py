@@ -1,6 +1,5 @@
 import sys
 import argparse
-from colors import *
 from myCliApp.globals import app_version, app_name
 
 
@@ -27,7 +26,7 @@ def cli():
         args = parse_arguments()
 
         # Add application code here
-        print(color(f"{app_name} v{app_version}", fg="blue"))
+        print(f"{app_name} v{app_version}")
 
     except KeyboardInterrupt:
         print("Aborted by user.")
