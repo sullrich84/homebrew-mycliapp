@@ -1,0 +1,29 @@
+version: 3
+
+tasks:
+  venv_deactivate:
+    silent: true
+    ignore_error: true
+    cmds:
+      - deactivate
+
+  venv_activate:
+    silent: true
+    cmds:
+      - python3 -m venv venv 
+      - source venv/bin/activate
+      - pip3 install .
+
+  venv:
+    silent: true
+    cmds:
+      - task: venv_deactivate
+      - task: venv_activate
+  
+  poet:
+    silent: true
+    cmds:
+      - task: venv
+      - pip3 install homebrew-pypi-poet
+      - poet myCliApp
+
