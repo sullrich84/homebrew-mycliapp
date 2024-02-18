@@ -4,13 +4,13 @@ from setuptools import setup, find_packages
 
 def get_version():
     rel_path = os.path.dirname(os.path.abspath(__file__))
-    path = os.path.join(rel_path, "myCliApp", "version.py")
+    path = os.path.join(rel_path, "myCliApp", "globals.py")
 
     v = {}
     with open(path) as fp:
         exec(fp.read(), v)
 
-    return v["__version__"]
+    return v["app_version"]
 
 
 setup(
