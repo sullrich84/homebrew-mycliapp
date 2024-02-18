@@ -20,4 +20,8 @@ class Mycliapp < Formula
   test do
     assert(shell_output("#{bin}/mycliapp").start_with?("MyCliApp"))
   end
+
+  def post_install
+    ohai "✅ Formula has been successfully installed"
+  end
 end
