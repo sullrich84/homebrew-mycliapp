@@ -1,6 +1,6 @@
 import sys
 import argparse
-from ansicolors
+from colors import *
 from myCliApp.globals import app_version, app_name
 
 
@@ -27,7 +27,7 @@ def cli():
         args = parse_arguments()
 
         # Add application code here
-        print(cyan(app_name), yellow(f"v{app_version}"))
+        print(color(f"{app_name} v{app_version}", fg="blue"))
 
     except KeyboardInterrupt:
         print("Aborted by user.")
