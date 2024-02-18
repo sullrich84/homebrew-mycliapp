@@ -1,2 +1,2 @@
 import argparse
-from myCliApp.version import __version__
+from myCliApp.globals import app_version, app_name
