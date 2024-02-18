@@ -22,6 +22,6 @@ class Mycliapp < Formula
   end
 
   def post_install
-    ohai "✅ Formula has been successfully installed"
+    ohai "✅ Formula has been successfully installed!"
   end
 end
