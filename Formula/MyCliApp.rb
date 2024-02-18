@@ -17,7 +17,7 @@ class Mycliapp < Formula
     virtualenv_install_with_resources
   end
 
-  # test do
-  #   assert_match "sullrich84/atlas 0.0.0-alpha", shell_output("#{bin}/atlas")
-  # end
+  test do
+    assert(shell_output("#{bin}/mycliapp").start_with?("MyCliApp"))
+  end
 end
