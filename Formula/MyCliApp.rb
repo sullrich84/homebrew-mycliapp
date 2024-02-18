@@ -1,4 +1,4 @@
-class MyCliApp < Formula
+class Mycliapp < Formula
   include Language::Python::Virtualenv
 
   desc "MyCliApp"
