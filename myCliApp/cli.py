@@ -1,12 +1,12 @@
 import sys
 import argparse
-from myCliApp.globals import app_version, app_name
+from myCliApp.globals import app_version, app_name, app_full_name, app_description
 
 
 def parse_arguments():
     parser = argparse.ArgumentParser(
         prog=app_name,
-        description="Text describing the atlas application.",
+        description=app_description,
         epilog="Text at the bottom of help",
     )
 
@@ -26,7 +26,7 @@ def cli():
         args = parse_arguments()
 
         # Add application code here
-        print(f"{app_name} v{app_version}")
+        print(f"{app_full_name} v{app_version}")
 
     except KeyboardInterrupt:
         print("Aborted by user.")
