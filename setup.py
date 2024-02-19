@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 
 rel_path = os.path.dirname(os.path.abspath(__file__))
-path = os.path.join(rel_path, "myCliApp", "globals.py")
+path = os.path.join(rel_path, "mycliapp", "globals.py")
 
 g = {}
 with open(path) as fp:
@@ -27,6 +27,6 @@ setup(
     # for the executable of this application.
     entry_points="""
         [console_scripts]
-        myCliApp=myCliApp.cli:cli
+        mycliapp=mycliapp.cli:cli
     """,
 )

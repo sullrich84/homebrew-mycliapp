@@ -1,6 +1,6 @@
 import sys
 import argparse
-from myCliApp.globals import (
+from mycliapp.globals import (
     app_version,
     app_name,
     app_full_name,
