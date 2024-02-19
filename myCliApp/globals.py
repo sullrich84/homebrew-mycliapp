@@ -1,5 +1,5 @@
 app_version = "0.0.0"
-app_name = "MyCliApp"
+app_name = "mycliapp"
 app_full_name = "MyCliApp"
 app_description = "MyCliApp"
 app_epilog = "MyCliApp"

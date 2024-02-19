@@ -25,5 +25,5 @@ tasks:
     cmds:
       - task: venv
       - pip3 install homebrew-pypi-poet
-      - poet myCliApp
+      - poet mycliapp
 
