@@ -1,13 +1,19 @@
 import sys
 import argparse
-from myCliApp.globals import app_version, app_name, app_full_name, app_description
+from myCliApp.globals import (
+    app_version,
+    app_name,
+    app_full_name,
+    app_description,
+    app_epilog,
+)
 
 
 def parse_arguments():
     parser = argparse.ArgumentParser(
         prog=app_name,
         description=app_description,
-        epilog="Text at the bottom of help",
+        epilog=app_epilog,
     )
 
     parser.add_argument(
@@ -24,8 +30,6 @@ def parse_arguments():
 def cli():
     try:
         args = parse_arguments()
-
-        # Add application code here
         print(f"{app_full_name} v{app_version}")
 
     except KeyboardInterrupt:
