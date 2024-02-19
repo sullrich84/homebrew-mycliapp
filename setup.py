@@ -2,20 +2,17 @@ import os
 from setuptools import setup, find_packages
 
 
-def get_version():
-    rel_path = os.path.dirname(os.path.abspath(__file__))
-    path = os.path.join(rel_path, "myCliApp", "globals.py")
+rel_path = os.path.dirname(os.path.abspath(__file__))
+path = os.path.join(rel_path, "myCliApp", "globals.py")
 
-    v = {}
-    with open(path) as fp:
-        exec(fp.read(), v)
-
-    return v["app_version"]
+g = {}
+with open(path) as fp:
+    exec(fp.read(), g)
 
 
 setup(
-    name="myCliApp",
-    version=get_version(),
+    name=g["app_name"],
+    version=g["app_version"],
     packages=find_packages(),
     include_package_data=True,
     # Note: Align this with Homebrew formula!
