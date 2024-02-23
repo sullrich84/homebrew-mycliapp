@@ -6,7 +6,7 @@ class Mycliapp < Formula
   head "https://github.com/sullrich84/homebrew-mycliapp.git",
     :branch => "main"
 
-  depends_on "python@3.9"
+  depends_on "python@3.12"
 
   resource "argparse" do
     url "https://files.pythonhosted.org/packages/18/dd/e617cfc3f6210ae183374cd9f6a26b20514bbb5a792af97949c5aacddf0f/argparse-1.4.0.tar.gz"
@@ -14,7 +14,7 @@ class Mycliapp < Formula
   end
 
   def install
-    virtualenv_install_with_resources
+    virtualenv_install_with_resources(system_site_packages: false)
   end
 
   test do
