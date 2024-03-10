@@ -1,6 +1,6 @@
 import sys
 import argparse
-from mycliapp.globals import (
+from ghq.globals import (
     app_version,
     app_name,
     app_full_name,

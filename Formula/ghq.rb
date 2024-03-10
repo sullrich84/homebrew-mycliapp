@@ -1,9 +1,9 @@
-class Mycliapp < Formula
+class Ghq < Formula
   include Language::Python::Virtualenv
 
-  desc "MyCliApp"
-  homepage "https://github.com/sullrich84/homebrew-mycliapp"
-  head "https://github.com/sullrich84/homebrew-mycliapp.git",
+  desc "ghq"
+  homepage "https://github.com/sullrich84/homebrew-ghq"
+  head "https://github.com/sullrich84/homebrew-ghq.git",
     :branch => "main"
 
   depends_on "python@3.12"
@@ -18,7 +18,7 @@ class Mycliapp < Formula
   end
 
   test do
-    assert(shell_output("#{bin}/mycliapp").start_with?("MyCliApp"))
+    assert(shell_output("#{bin}/ghq").start_with?("Garmin HQ"))
   end
 
   def post_install

@@ -1,4 +1,4 @@
-from mycliapp.cli import cli
+from ghq.cli import cli
 
 if __name__ == "__main__":
     cli()
